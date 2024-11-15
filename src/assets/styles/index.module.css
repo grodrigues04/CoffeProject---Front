@@ -1,0 +1,300 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Teko:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Teko:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+body{
+    background-color: #1f1517;
+}
+
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #1F1517;
+    height: 68px;
+    color: #FFF2E7;
+    position: relative; 
+    z-index: 10; 
+}
+
+.header_text_navegation{
+    display: flex;
+    flex-direction: row;
+    font-size: 20px;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight:300;
+    font-style: normal;
+    gap: 20px;
+}
+
+.icon_text{
+    font-family: "Teko", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 450;
+    font-style: normal;
+    font-size: 40px;
+    color: #FFFFFF !important;
+}
+
+.extra_text_header{
+    font-size: 20px;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight:300;
+    font-style: normal;
+}
+
+.navegation_home_text{
+    opacity: 100% !important;
+}
+
+.navigation_extra_text{
+    opacity: 50%;
+}   
+
+.section_englober{
+    background-color: #181012;
+
+}
+section{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #181012;
+    padding: 2rem 22rem;
+}
+
+.section_container_text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+
+.section_main_text{
+    font-size: 40px;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    color: #FFFFFF;
+}
+
+.section_subtitle{
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+    color: #A45A49;
+}
+
+.section_about_text{
+    font-size: 22px;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight:300;
+    font-style: normal;
+    letter-spacing: 1px;
+    color: #C7BAB3;
+}
+
+.section_imgs_container{
+    max-width: 45%;
+    column-count: 4;
+    column-gap: 1rem;
+    margin: -5rem;
+    position: relative; /* Necessário para o z-index */
+    z-index: 1; /* Valor menor para ficar abaixo do header */
+}
+
+.section_imgs{
+    width: 100%;
+    border-radius: 0.5rem;
+}
+
+article{
+    padding-top: 25px;
+    background-color: #1f1517;
+    position: relative; 
+    z-index: 5; 
+    padding: 0rem 22rem;
+
+}
+
+.article_introduction{
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 5px;
+}
+
+.article_introduction > h2{
+    font-size: 30px;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 540;
+    font-style: normal;
+    color: #FFFFFF;
+}
+
+.article_introduction > h5 {
+    font-size: 15px !important
+}
+
+.coments_section{
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 20px; 
+}
+
+.people_coments_container{
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    height: 186px;
+    gap: 30px;
+    border-radius: 8px;
+    margin-top: 30px;
+    background-color: #241a1c;
+    padding: 14px;
+
+}
+
+.people_coments_container > h6 {
+    font-size: 13px;
+    font-family: "Epilogue", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+    color: #E7A80E;
+}
+
+.people_coments_container > p{
+    font-size: 18px;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight:300;
+    font-style: normal;
+    color: #C7BAB3;
+}
+
+.product_score{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.product_score > h3{
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 540;
+    font-style: normal;
+    color: #FFFFFF;
+    letter-spacing: -2%;
+    font-size: 25px;
+}
+
+.product_score > h4{
+    font-size: 16px;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight:300;
+    font-style: normal;
+    color: #756A67;
+}
+
+.user_infos{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 8px;
+}
+
+.user_infos > p{
+    font-size: 16px;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight:300;
+    font-style: normal;
+    color: #C7BAB3;
+}
+
+.more_examples{
+    margin-top: 32px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #C7BAB3;
+    font-size: 20px;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight:300;
+    font-style: normal;
+}
+
+footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #23181A;
+    height: 172px;
+    text-align: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+footer > h5{
+    text-align: center;
+    color: #FFF2E7;
+    font-size: 18px;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight:300;
+    font-style: normal;
+}
+
+footer >p{
+    text-align: center;
+    color: #FFF2E7;
+    font-size: 13px;
+    opacity: 50%;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight:300;
+    font-style: normal;
+}
+
+
+@media (max-width: 1463px){
+
+    section{
+        justify-content: center;
+        padding: 1rem 0;
+    }
+    article{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+    }
+    .section_imgs_container{
+        display: none;
+    }
+    .coments_section{
+        display: flex;  
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .people_coments_container{
+        height: 230px;
+        width: auto;
+    }
+}
