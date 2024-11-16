@@ -1,4 +1,4 @@
-import styles from '../assets/styles/index.module.css'
+import styles from '../assets/styles/home.module.css'
 import Avatar from "../assets/imgs/Avatar.png"
 import Image1 from "../assets/imgs/image1.png"
 import Image2 from "../assets/imgs/image2.png"
