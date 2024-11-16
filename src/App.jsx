@@ -5,6 +5,7 @@ import './App.css';
 import Home from './components/Home';
 import Revenues from './components/Revenues';
 import { Routes, Route } from 'react-router-dom'; // Importando Routes e Route
+import Cafes from './components/Cafes';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/revenues" element={<Revenues />} />
+          <Route path="/cafes" element={<Cafes />} />
       </Routes>
     </>
   );
