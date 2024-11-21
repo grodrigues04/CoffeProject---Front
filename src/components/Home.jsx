@@ -13,28 +13,19 @@ import Image10 from "../assets/imgs/image10.png"
 import Image11 from "../assets/imgs/image11.png"
 import Image12 from "../assets/imgs/image12.png"
 import Rectanguele from "../assets/imgs/Rectangle 1.png" 
+import Header from './Header'
 
 function Home(){
     return(
     <>
-      <header>
-        <p className={styles.icon_text}>BALLECOFFE</p>
-        <div className={styles.header_text_navegation}>
-          <p className={styles.navegation_home_text}>Home</p>
-          <p className={styles.navigation_extra_text}>Receitas</p>
-          <p className={styles.navigation_extra_text}>Novidades</p>
-          <p className={styles.navigation_extra_text}>Melhor avaliadas</p>
-        </div>
-        <p className={styles.extra_text_header}>Github</p>
-      </header>
-
+      <Header/>
       <div className={styles.section_englober}>
         <section>
           <div className={styles.section_container_text}>
             <h4 className={styles.section_subtitle}>NOVIDADE</h4>
             <h1 className={styles.section_main_text}>
-              Encontre a <br />
-              receita perfeita!
+              Encontre o seu <br />
+              café perfeito!
             </h1>
             <img src={Rectanguele} alt="Rectangle" />
             <h2 className={styles.section_about_text}>
@@ -47,68 +38,68 @@ function Home(){
               <img
                 src={Image1}
                 alt={"Image1"}
-                className={"styles.section_imgs"}
+                className={styles.section_imgs}
               />
               <img
                 src={Image2}
                 alt={"Image2"}
-                className={"styles.section_imgs"}
+                className={styles.section_imgs}
               />
               <img
                 src={Image3}
                 alt={"Image3"}
-                className={"styles.section_imgs"}
+                className={styles.section_imgs}
               />
               <img
                 src={Image4}
                 alt={"Image4"}
-                className={"styles.section_imgs"}
+                className={styles.section_imgs}
               />
               <img
                 src={Image5}
                 alt={"Image5"}
-                className={"styles.section_imgs"}
+                className={styles.section_imgs}
               />
               <img
                 src={Image6}
                 alt={"Image6"}
-                className={"styles.section_imgs"}
+                className={styles.section_imgs}
               />            
               <img
                 src={Image7}
                 alt={"Image7"}
-                className={"styles.section_imgs"}
+                className={styles.section_imgs}
               />
               <img
                 src={Image8}
                 alt={"Image8"}
-                className={"styles.section_imgs"}
+                className={styles.section_imgs}
               />
               <img
                 src={Image9}
                 alt={"Image9"}
-                className={"styles.section_imgs"}
+                className={styles.section_imgs}
               />
               <img
                 src={Image10}
                 alt={"Image10"}
-                className={"styles.section_imgs"}
+                className={styles.section_imgs}
               />
               <img
                 src={Image11}
                 alt={"Image11"}
-                className={"styles.section_imgs"}
+                className={styles.section_imgs}
               />
               <img
                 src={Image12}
                 alt={"Image12"}
-                className={"styles.section_imgs"}
+                className={styles.section_imgs}
               />
           </div>
         </section>
       </div>
 
-      <article>
+      <article className={styles.article_home}>
         <div className={styles.article_introduction}>
           <h4 className={styles.section_subtitle}>RECEITAS</h4>
           <h2>Confira as últimas receitas</h2>
@@ -179,4 +170,4 @@ function Home(){
     )
 }
 
-export default Home
+export default Home;

@@ -1,0 +1,74 @@
+.table_section {
+    background: #23181A; /* Cor de fundo */
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombra */
+    max-width: 1000px;
+    margin: auto;
+}
+
+.table_title {
+    color: #FFF2E7;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.coffee_table {
+    width: 100%;
+    border-collapse: collapse; /* Remove espaçamento entre bordas */
+    background: #FFF2E7; /* Cor de fundo da tabela */
+    border-radius: 8px; /* Bordas arredondadas */
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.coffee_table th,
+.coffee_table td {
+    padding: 1rem;
+    text-align: left;
+    color: #23181A;
+    border-bottom: 1px solid #ddd; /* Linha separadora */
+}
+
+.coffee_table th {
+    background: #FF7E6B; /* Cor do cabeçalho */
+    color: #FFF2E7;
+    font-weight: bold;
+}
+
+.coffee_table tr:nth-child(even) {
+    background: #FFF2E7; /* Cor alternada para linhas */
+}
+
+.coffee_table tr:hover {
+    background: #FF9987; /* Cor de hover para as linhas */
+    cursor: pointer;
+}
+
+.edit_button {
+    background-color: #4CAF50;
+    border-radius: 10px;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.delete_button {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 10px;
+
+}
+
+.edit_button:hover {
+    background-color: #45a049;
+}
+
+.delete_button:hover {
+    background-color: #e53935;
+}

@@ -1,0 +1,60 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Teko:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Teko:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+body{
+    background-color: #1f1517;
+}
+
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #1F1517;
+    height: 68px;
+    color: #FFF2E7;
+    position: relative; 
+    z-index: 10; 
+}
+
+.header_text_navegation{
+    display: flex;
+    flex-direction: row;
+    font-size: 20px;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight:300;
+    font-style: normal;
+    gap: 20px;
+}
+
+.icon_text{
+    font-family: "Teko", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 450;
+    font-style: normal;
+    font-size: 40px;
+    color: #FFFFFF !important;
+}
+
+.extra_text_header{
+    font-size: 20px;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight:300;
+    font-style: normal;
+}
+
+.navegation_home_text{
+    opacity: 100% !important;
+}
+
+.navigation_extra_text{
+    opacity: 50%;
+    text-decoration: none;
+}   

@@ -10,6 +10,7 @@ body {
 
 header {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
@@ -19,6 +20,7 @@ header {
 
 .header_text_navegation{
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     font-size: 20px;
     font-family: "Inter", sans-serif;
@@ -38,50 +40,29 @@ header {
     font-weight: 700;
 }
 
-main {
-    padding: 2rem;
-}
 
 .recipe_intro {
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content:space-evenly;
+    text-align:center;
+    gap: 30px;
     margin-bottom: 2rem;
 }
 
-.section_subtitle {
-    color: #A45A49;
-    font-weight: 300;
-}
-
-.section_main_text {
-    font-size: 2rem;
-    margin-top: 0.5rem;
-    font-weight: 700;
-}
-
-.section_about_text {
-    font-size: 1rem;
-    color: #C7BAB3;
-}
-
 .recipe_grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
+    display:flex;
 }
 
 .recipe_card {
-    background-color: #241a1c;
-    padding: 1.5rem;
-    border-radius: 10px;
-    text-align: center;
-    color: #FFF2E7;
+    width: 100%;
+    background-color: #181012;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
-.recipe_image {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-}
 
 .recipe_card h3 {
     font-size: 1.5rem;
@@ -111,22 +92,7 @@ footer p {
     margin: 0;
 }
 
-.recipe_form_section {
-    margin-top: 40px;
-    padding: 20px;
-    background-color: #241a1c;
-    border-radius: 8px;
-    color: #FFF2E7;
-    text-align: left;
-}
 
-.recipe_form_section h2 {
-    font-size: 28px;
-    font-family: "Montserrat", sans-serif;
-    font-weight: 600;
-    color: #FFFFFF;
-    margin-bottom: 20px;
-}
 
 .recipe-form {
     display: flex;
@@ -174,4 +140,30 @@ footer p {
 
 .recipe-form button:hover {
     background-color: #C68A6C;
+}
+
+.cafe_container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    background-color: #241a1c;
+    padding: 1.5rem;
+    border-radius: 10px;
+    text-align: center;
+    color: #FFF2E7;
+}
+
+.cafe_container_infos{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%
+}
+
+.img_config{
+    width: 230px;
+    height: 230px;
+    border-radius: 10px;
 }

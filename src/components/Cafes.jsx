@@ -1,47 +1,67 @@
+import styles from "../assets/styles/cafes.module.css";
 import { useEffect, useState } from "react";
-function Tasks(){
-    const [data, setData] = useState(null);
-    const [error, setError] = useState(null);
 
-    useEffect(() => {
+function Cafes() {
+    const [cafes, setCafes] = useState([])
+    useEffect(()=>{
         const fetchData = async () =>{
-            try{
-                const response = await fetch('http://localhost:8000');
-                if (!response.ok){
-                    throw new Error(`HTTP error! Status: ${response.status}`);
-                }
-                else{
-                    const result = await response.json(); // Converte para JSON
-                    setData(result); // Salva os dados no state
-                }
-            } catch(err){
-                setError(err.message); // Salva o erro no state
-            }
+            const response = await fetch("http://localhost:8000")
+            .then((res)=>{
+                return res.json();
+            })
+            .then((data)=>{
+                console.log(data)
+                setCafes(data)
+            })
+            .catch((error)=>{
+                setCafes(error)
+            })
         }
-        fetchData();
 
-    })
+        fetchData()
+    }, [])
 
-    if(error){
-        return <div>Erro: {error}</div>;
+    function requestDelet(id){
+        const response = fetch(`http://localhost:8000/cafe/${id}`,{
+            method:"DELETE"
+        })
+        .then((res) =>{
+            res.json()
+        })
+        window.location.reload(false);
     }
-
-    if (!data) {
-        return <div>Carregando...</div>;
-    }
-
-    return(
-        <div>
-            <h1>Lista de Pessoas</h1>
-            <ul>
-                {data.map((item) => (
-                    <li key={item.id}>
-                        {item.nome}
-                    </li>
+    return (
+        <article className={styles.table_section}>
+            <h2 className={styles.table_title}>Lista de Cafés</h2>
+            <table className={styles.coffee_table}>
+                <thead>
+                    <tr>
+                        <th>Nome do Café</th>
+                        <th>Preço</th>
+                        <th>Marca</th>
+                        <th>Ano de vencimento</th>
+                        <th>Caminho da Imagem</th>
+                        <th>Editar</th>
+                    </tr>
+                </thead>
+                <tbody>
+                {cafes.map((cafe)=>(
+                    <tr key={cafe.id}>
+                        <td>{cafe.nome_cafe}</td>
+                        <td>R${cafe.preco}</td>
+                        <td>{cafe.marca}</td>
+                        <td>{cafe.ano_vencimento}</td>
+                        <td>{cafe.img}</td>
+                        <td>
+                            <button className={styles.edit_button}>Editar</button>
+                            <button className={styles.delete_button} onClick={()=>requestDelet(cafe.id)}>Excluir</button>
+                        </td>   
+                    </tr>
                 ))}
-            </ul>
-        </div>
-    )
+                </tbody>
+            </table>
+        </article>
+    );
 }
 
-export default Tasks
+export default Cafes;
