@@ -1,5 +1,6 @@
 import styles from "../assets/styles/NovoCafe.module.css";
 import { useState, useEffect } from "react"
+import Loading from "./Loading"
 
 function EditarCafe(props){
     const queryParameters = new URLSearchParams(window.location.search)
@@ -70,9 +71,7 @@ function EditarCafe(props){
         console.log("A condicao do HTML FOI FALSE")
         console.log(html)
         return(
-            <>
-                <h2>Carregando seus dados...</h2>
-            </>
+            <Loading/>
         )
     }
     else{
