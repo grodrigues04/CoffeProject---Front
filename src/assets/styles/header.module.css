@@ -52,7 +52,15 @@ header{
 
 .navegation_home_text{
     opacity: 100% !important;
+    outline: none;
+    text-decoration: none;
+    color: #FFF2E7;
 }
+
+.navegation_home_text:hover{
+    color:#FF7E6B;
+}
+
 
 .navigation_extra_text{
     opacity: 50%;

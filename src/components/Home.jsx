@@ -18,7 +18,12 @@ import Header from './Header'
 function Home(){
     return(
     <>
-      <Header/>
+      <Header
+      home="./"
+      loja="./loja"
+      novocafe="./novocafe"
+      cafes="./cafes"
+      />
       <div className={styles.section_englober}>
         <section>
           <div className={styles.section_container_text}>

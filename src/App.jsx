@@ -7,6 +7,8 @@ import Loja from './components/Loja';
 import { Routes, Route } from 'react-router-dom'; // Importando Routes e Route
 import Cafes from './components/Cafes';
 import NovoCafe from './components/NovoCafe';
+import EditarCafe from './components/EditarCafe';
+import NotFound from './components/NotFound';
 
 function App() {
   
@@ -18,8 +20,8 @@ function App() {
           <Route path="/cafes" element={<Cafes />} />
           <Route path="/novocafe" element={<NovoCafe />} />
           <Route path="/editar" element={<Cafes />} />
-
-
+          <Route path="/editarCafeId" element={<EditarCafe />}/>
+          <Route path="*" element={<NotFound />} />
       </Routes>
     </>
   );

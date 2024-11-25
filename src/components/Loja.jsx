@@ -25,7 +25,12 @@ function Loja(){
 
     return(
         <>
-            <Header/> 
+            <Header
+            home="../"
+            loja="../loja"
+            novocafe="../novocafe"
+            cafes="../cafes"
+            /> 
             <section className={styles.recipe_intro}>
                 <h1 className={styles.section_main_text}>Descubra novas receitas deliciosas</h1>
             </section>

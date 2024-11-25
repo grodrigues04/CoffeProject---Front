@@ -1,6 +1,7 @@
 import styles from "../assets/styles/cafes.module.css";
 import { useEffect, useState } from "react";
-
+import Header from "./Header";
+import { Link } from "react-router-dom";
 function Cafes() {
     const [cafes, setCafes] = useState([])
     useEffect(()=>{
@@ -31,36 +32,44 @@ function Cafes() {
         window.location.reload(false);
     }
     return (
-        <article className={styles.table_section}>
-            <h2 className={styles.table_title}>Lista de Cafés</h2>
-            <table className={styles.coffee_table}>
-                <thead>
-                    <tr>
-                        <th>Nome do Café</th>
-                        <th>Preço</th>
-                        <th>Marca</th>
-                        <th>Ano de vencimento</th>
-                        <th>Caminho da Imagem</th>
-                        <th>Editar</th>
-                    </tr>
-                </thead>
-                <tbody>
-                {cafes.map((cafe)=>(
-                    <tr key={cafe.id}>
-                        <td>{cafe.nome_cafe}</td>
-                        <td>R${cafe.preco}</td>
-                        <td>{cafe.marca}</td>
-                        <td>{cafe.ano_vencimento}</td>
-                        <td>{cafe.img}</td>
-                        <td>
-                            <button className={styles.edit_button}>Editar</button>
-                            <button className={styles.delete_button} onClick={()=>requestDelet(cafe.id)}>Excluir</button>
-                        </td>   
-                    </tr>
-                ))}
-                </tbody>
-            </table>
-        </article>
+        <>
+            <Header
+            home="../"
+            loja="../loja"
+            novocafe="../novocafe"
+            cafes="../cafes"
+            />
+            <article className={styles.table_section}>
+                <h2 className={styles.table_title}>Lista de Cafés</h2>
+                <table className={styles.coffee_table}>
+                    <thead>
+                        <tr>
+                            <th>Nome do Café</th>
+                            <th>Preço</th>
+                            <th>Marca</th>
+                            <th>Ano de vencimento</th>
+                            <th>Caminho da Imagem</th>
+                            <th>Editar</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    {cafes.map((cafe)=>(
+                        <tr key={cafe.id}>
+                            <td>{cafe.nome_cafe}</td>
+                            <td>R${cafe.preco}</td>
+                            <td>{cafe.marca}</td>
+                            <td>{cafe.ano_vencimento}</td>
+                            <td>{cafe.img}</td>
+                            <td>
+                                <button className={styles.edit_button}><Link to={`../editarCafeId?id=${cafe.id}`}>Editar</Link></button>
+                                <button className={styles.delete_button} onClick={()=>requestDelet(cafe.id)}>Excluir</button>
+                            </td>   
+                        </tr>
+                    ))}
+                    </tbody>
+                </table>
+            </article>
+        </>
     );
 }
 

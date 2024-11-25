@@ -159,6 +159,7 @@ footer p {
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
+    gap: 20px;
     width: 100%
 }
 
