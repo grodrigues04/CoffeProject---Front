@@ -5,6 +5,8 @@ import { useEffect, useState } from "react";
 import Header from "./Header";
 function Loja(){
     const [cafes, setCafes] = useState([])
+    const [html, setHtml] = useState(false)
+    const [error, setError] = useState(false)
     useEffect(()=>{
         const fetchData = async () =>{
             const response = await fetch("http://localhost:8000")
