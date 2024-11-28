@@ -1,5 +1,6 @@
 import styles from "../assets/styles/NovoCafe.module.css";
 import { useState, useEffect } from "react"
+import { Navigate } from "react-router-dom";
 import Loading from "./Loading"
 
 function EditarCafe(props){
@@ -8,6 +9,7 @@ function EditarCafe(props){
     const [cafe, setCafe] = useState([])
     const [html, setHtml] = useState(false)
     const [error, setError] = useState(false)
+    const [newcoffe, setNewcoffe] = useState(false)
     useEffect(()=>{
         const fetchCafe = async function(){
             try{
@@ -33,7 +35,7 @@ function EditarCafe(props){
     
     async function submite(e){
         e.preventDefault();
-        const response =await fetch(`http://localhost:8000/cafe/${cafeId}`, 
+        const response = await fetch(`http://localhost:8000/cafe/${cafeId}`, 
             {
                 method:"PUT",
                 headers:{
@@ -42,11 +44,17 @@ function EditarCafe(props){
                 body: JSON.stringify(cafe),
 
             })
-        console.log(await response.json());
+        let JsonResponse = await response.json()
+        if(JsonResponse.code == 200){
+            setNewcoffe(true) 
+        }
+    }
+
+    if(newcoffe){
+        return <Navigate to="../cafes" replace />
     }
 
     const handleChange = function(e){
-        console.log("evento", e)
         e.preventDefault();
         const {name, value} = e.target; //pega as propriedades name(nome do campo) e o valor atual dele.
 
@@ -58,7 +66,6 @@ function EditarCafe(props){
 
 
     if(error){  
-        console.log("A condicao do HTML FOI fail")
         console.log(html)
         return(
             <>
@@ -68,14 +75,12 @@ function EditarCafe(props){
     }
 
     if(!html){
-        console.log("A condicao do HTML FOI FALSE")
         console.log(html)
         return(
             <Loading/>
         )
     }
     else{
-        console.log("A condicao do HTML foi true")
         console.log(html)
         return(
             <>
