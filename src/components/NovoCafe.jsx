@@ -56,6 +56,8 @@ function CafeId(){
                         <label for="img">Url da Imagem</label>
                         <input type="url" id="ingredients" name="img"/>
                         <input type="submit" value="Enviar Receita"/>
+
+                        <button type="submit">Submit</button>
                     </form>
                 </div>
             </article>

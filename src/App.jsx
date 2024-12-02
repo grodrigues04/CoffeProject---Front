@@ -9,7 +9,7 @@ import Cafes from './components/Cafes';
 import NovoCafe from './components/NovoCafe';
 import EditarCafe from './components/EditarCafe';
 import NotFound from './components/NotFound';
-
+import TesteFormik from "./components/NovoCafe copy"
 function App() {
   
   return (
@@ -22,6 +22,7 @@ function App() {
           <Route path="/editar" element={<Cafes />} />
           <Route path="/editarCafeId" element={<EditarCafe />}/>
           <Route path="*" element={<NotFound />} />
+          <Route path="/teste" element={<TesteFormik />} />
       </Routes>
     </>
   );
