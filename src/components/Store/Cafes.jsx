@@ -1,11 +1,11 @@
-import styles from "../assets/styles/cafes.module.css";
+import styles from "../../assets/styles/cafes.module.css";
 import { useEffect, useState } from "react";
-import Header from "./Header";
+import Header from "../utils/Header";
 import { Link } from "react-router-dom";
-import Loading from "./Loading";
-import Error from "./Error"
+import Loading from "../utils/Loading";
+import Error from "../utils/Error"
 function Cafes() {
-    const [cafes, setCafes] = useState([])
+    const [cafes, setCafes] =   useState([])
     const [html, setHtml] = useState(false)
     const [error, setError] = useState(false)
 

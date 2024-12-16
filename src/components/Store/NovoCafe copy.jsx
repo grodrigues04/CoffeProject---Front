@@ -1,8 +1,8 @@
 import { useState } from "react";
-import styles from "../assets/styles/NovoCafe.module.css"
-import Header from "./Header";
+import styles from "../../assets/styles/NovoCafe.module.css"
+import Header from "../utils/Header";
 import { Navigate  } from 'react-router-dom';
-import basicSchema from "../utils/validation"
+import basicSchema from "../../utils/validation"
 import { Formik, Form, Field, ErrorMessage } from "formik";
 
 function CafeId(){
@@ -45,7 +45,7 @@ function CafeId(){
             {({ isSubmitting }) => (
                 <Form className={styles.recipe_form}>
                     <label htmlFor="nome_cafe">Nome do Café</label>
-                    <Field name="nome_cafe" type="text"></Field>
+                    <Field name="nome_cafe" type="text"></Field>    
                     <ErrorMessage name="nome_cafe"/>
                     
                     <label htmlFor="preco">Preço</label>

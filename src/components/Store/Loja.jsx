@@ -1,10 +1,10 @@
 
-import styles from "../assets/styles/loja.module.css"
+import styles from "../../assets/styles/loja.module.css"
 import { Link } from 'react-router-dom'
 import { useEffect, useState } from "react";
-import Loading from "./Loading";
-import Error from "./Error";
-import Header from "./Header";
+import Loading from "../utils/Loading";
+import Error from "../utils/Error";
+import Header from "../utils/Header";
 function Loja(){
     const [cafes, setCafes] = useState([])
     const [html, setHtml] = useState(false)

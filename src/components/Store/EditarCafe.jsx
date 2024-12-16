@@ -1,7 +1,7 @@
-import styles from "../assets/styles/NovoCafe.module.css";
+import styles from "../../assets/styles/NovoCafe.module.css";
 import { useState, useEffect } from "react"
 import { Navigate } from "react-router-dom";
-import Loading from "./Loading"
+import Loading from "../utils/Loading"
 
 function EditarCafe(props){
     const queryParameters = new URLSearchParams(window.location.search)

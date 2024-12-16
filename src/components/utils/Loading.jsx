@@ -1,4 +1,4 @@
-import styles from "../assets/styles/loading.module.css"
+import styles from "../../assets/styles/loading.module.css"
 function Loading(){
     return(
         <>

@@ -9,11 +9,11 @@ import Image6 from "../assets/imgs/image6.png"
 import Image7 from "../assets/imgs/image7.png"
 import Image8 from "../assets/imgs/image8.png"
 import Image9 from "../assets/imgs/image9.png"
-import Image10 from "../assets/imgs/image10.png"
+import Image10 from "../assets/imgs/image10.png"  
 import Image11 from "../assets/imgs/image11.png"
 import Image12 from "../assets/imgs/image12.png"
 import Rectanguele from "../assets/imgs/Rectangle 1.png" 
-import Header from './Header'
+import Header from './utils/Header'
 
 function Home(){
     return(

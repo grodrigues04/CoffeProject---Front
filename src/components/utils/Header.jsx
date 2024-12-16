@@ -1,4 +1,4 @@
-import styles from "../assets/styles/header.module.css"
+import styles from "../../assets/styles/header.module.css"
 import { Link } from 'react-router-dom'
 function Header(props){
     return(

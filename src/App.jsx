@@ -3,13 +3,13 @@ import reactLogo from './assets/react.svg';
 import viteLogo from '/vite.svg';
 import './App.css';
 import Home from './components/Home';
-import Loja from './components/Loja';
+import Loja from './components/Store/Loja';
 import { Routes, Route } from 'react-router-dom'; // Importando Routes e Route
-import Cafes from './components/Cafes';
-import NovoCafe from './components/NovoCafe';
-import EditarCafe from './components/EditarCafe';
-import NotFound from './components/NotFound';
-import TesteFormik from "./components/NovoCafe copy"
+import Cafes from './components/Store/Cafes';
+import EditarCafe from './components/Store/EditarCafe';
+import NotFound from './components/utils/NotFound';
+import NovoCafe from "./components/Store/NovoCafe copy"
+import UserCadastro from './components/User/UserCadastro';
 function App() {
   
   return (
@@ -21,8 +21,8 @@ function App() {
           <Route path="/novocafe" element={<NovoCafe />} />
           <Route path="/editar" element={<Cafes />} />
           <Route path="/editarCafeId" element={<EditarCafe />}/>
-          <Route path="*" element={<NotFound />} />
-          <Route path="/teste" element={<TesteFormik />} />
+          <Route path="*" element={<NotFound />}/>
+          <Route path="/cadastro" element={<UserCadastro/>}/>
       </Routes>
     </>
   );

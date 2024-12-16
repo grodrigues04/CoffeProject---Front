@@ -1,4 +1,4 @@
-import styles from "../assets/styles/notfound.module.css"
+import styles from "../../assets/styles/notfound.module.css"
 import Header from "./Header";
 function NotFound(){
     return (
