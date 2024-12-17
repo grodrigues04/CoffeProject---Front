@@ -1,4 +1,3 @@
-
 import styles from "../../assets/styles/loja.module.css"
 import { Link } from 'react-router-dom'
 import { useEffect, useState } from "react";
@@ -29,7 +28,6 @@ function Loja(){
 
         fetchData()
     }, [])
-
     if(error){
         return(
             <>
