@@ -10,20 +10,16 @@ import { Navigate } from "react-router-dom";
 function UserCadastro(){
     const [redirect, setRedirect] = useState(false)
     async function submiteForm(values, {setSubmitting}) {
-        const response = axios.post('http://localhost:8000/users',{
-            title:"Criação de usuario",
+        const response = axios.post('http://localhost:8000/cadastro',{
             body:JSON.stringify(values) 
         })
         .then((response)=>{
             console.log("Resposta bem sucedida")
+            setRedirect(true)
         })
         .catch((response)=>{
             console.log("Ocorreu um erro:", response)
         })
-        
-        if (response.status == 201){
-            setRedirect(true)
-        }
   
     }
     //Se a requisição de cadastro for bem sucedida, redireciona para pagina de login.
