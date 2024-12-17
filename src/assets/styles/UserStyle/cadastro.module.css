@@ -1,0 +1,79 @@
+/* Estilos globais do formulário */
+.forms_class{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #23181A;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  }
+.forms_class text{
+    color: red;
+}
+  /* Estilo das labels */
+.forms_class label {
+    font-size: 1.1rem;
+    color: #FFF2E7;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  /* Estilo dos campos de input */
+.forms_class input {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #FFF2E7;
+    border-radius: 4px;
+    background: #23181A;
+    color: #FFF2E7;
+    transition: border-color 0.3s;
+  }
+  
+  /* Efeito de foco nos inputs */
+.forms_class input:focus {
+    outline: none;
+    border-color: #FFF2E7;
+    box-shadow: 0 0 5px rgba(255, 242, 231, 0.7);
+  }
+  
+  /* Estilo das mensagens de erro */
+.forms_class span {
+    color: #ff4d4d;
+    font-size: 0.9rem;
+    margin-top: 5px;
+  }
+  
+  /* Estilo do botão de submit */
+.forms_class button {
+    padding: 12px 20px;
+    background-color: #FFF2E7;
+    color: #23181A;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-weight: bold;
+  }
+  
+  /* Efeito de hover no botão */
+.forms_class button:hover {
+    background-color: #835f37;
+    color: #FFF2E7;
+  }
+  
+  /* Estilo do formulário em geral (quando exibido em telas pequenas) */
+  @media (max-width: 600px) {
+    form {
+      padding: 15px;
+    }
+    
+    input {
+      font-size: 1rem;
+    }
+  }
+  
