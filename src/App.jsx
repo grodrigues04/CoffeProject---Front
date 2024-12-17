@@ -10,6 +10,7 @@ import EditarCafe from './components/Store/EditarCafe';
 import NotFound from './components/utils/NotFound';
 import NovoCafe from "./components/Store/NovoCafe copy"
 import UserCadastro from './components/User/UserCadastro';
+import UserLogin from './components/User/UserLogin';
 function App() {
   
   return (
@@ -23,6 +24,7 @@ function App() {
           <Route path="/editarCafeId" element={<EditarCafe />}/>
           <Route path="*" element={<NotFound />}/>
           <Route path="/cadastro" element={<UserCadastro/>}/>
+          <Route path="/login" element={<UserLogin/>}/>
       </Routes>
     </>
   );
