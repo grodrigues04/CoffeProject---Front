@@ -9,6 +9,7 @@ import { Navigate } from "react-router-dom";
 
 function UserCadastro(){
     const [redirect, setRedirect] = useState(false)
+    const [error, setError] = useState(false)
     async function submiteForm(values, {setSubmitting}) {
         const response = axios.post('http://localhost:8000/cadastro',{
             body:JSON.stringify(values) 
@@ -19,6 +20,9 @@ function UserCadastro(){
         })
         .catch((response)=>{
             console.log("Ocorreu um erro:", response)
+            if(response.status == 409){
+                window.alert(response.response.data.message)
+            }
         })
   
     }
