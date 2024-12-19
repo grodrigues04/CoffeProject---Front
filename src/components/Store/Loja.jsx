@@ -4,10 +4,13 @@ import { useEffect, useState } from "react";
 import Loading from "../utils/Loading";
 import Error from "../utils/Error";
 import Header from "../utils/Header";
+import axios from "axios";
+
 function Loja(){
     const [cafes, setCafes] = useState([])
     const [html, setHtml] = useState(false)
     const [error, setError] = useState(false)
+
     useEffect(()=>{
         const fetchData = async () =>{
             try{
@@ -48,8 +51,27 @@ function Loja(){
             <Loading/>
         )
     }
-
+ 
     if(html){
+        async function addToCart(item_id, nome_cafe){
+            const userObject = JSON.parse(localStorage.getItem("id"))
+            console.log(userObject)
+            const user_id = userObject.id
+            console.log("id", user_id)
+            const respose = await axios.post("http://localhost:8000/novoItemCarrinho",
+                {
+                    body:{"id_item":item_id, "id_user":user_id}
+                }
+            ).then((res)=>{
+                window.alert(`${nome_cafe} foi adicionado ao seu carrinho! `)
+            })
+            .catch((res)=>{ 
+                window.alert(`Ocorreu um erro ao tentar adicionar ao carrinho: ${res}`)
+            })
+
+        }
+        
+
         return(
             <>
                 <Header
@@ -72,6 +94,9 @@ function Loja(){
                                     <p>Preço: R${item.preco}</p>
                                     <p>Vencimento: {item.ano_vencimento}</p>
                                 </div>
+                            <button onClick={()=>{
+                                addToCart(item.id, item.nome_cafe)
+                            }}>Adicionar ao carrinho</button>
                             </div>
                         ))}
                     </article>
