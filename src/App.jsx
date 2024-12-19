@@ -11,8 +11,10 @@ import NotFound from './components/utils/NotFound';
 import NovoCafe from "./components/Store/NovoCafe copy"
 import UserCadastro from './components/User/UserCadastro';
 import UserLogin from './components/User/UserLogin';
+import Carrinho from './components/User/Carrinho';
 function App() {
-  
+  const current_session = JSON.parse(localStorage.getItem('id')).id
+
   return (
     <>
       <Routes>
@@ -25,6 +27,7 @@ function App() {
           <Route path="*" element={<NotFound />}/>
           <Route path="/cadastro" element={<UserCadastro/>}/>
           <Route path="/login" element={<UserLogin/>}/>
+          <Route path="/carrinho" element={<Carrinho/>}/>
       </Routes>
     </>
   );
