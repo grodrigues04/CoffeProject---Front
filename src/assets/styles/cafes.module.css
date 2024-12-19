@@ -72,3 +72,15 @@
 .delete_button:hover {
     background-color: #e53935;
 }
+
+.total_carrinho{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 25%;
+}
+
+.price{
+    margin-top: 15px;
+    font-size: 25px;
+}
