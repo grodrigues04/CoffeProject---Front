@@ -12,8 +12,26 @@ function Carrinho(){
     const [Cafedata, setCafedata] = useState(null)
     const [preco, setPreço] = useState(null)
 
-    
 
+    function criarPedido(){
+        //So deixa fazer a requisição caso exista pelo menos 1 item dentro do array cafeData
+        //Nao faz sentido tentar criar o pedido do carrinho se n existir nada no carrinho cabeça de tabaco
+        if(Cafedata.length > 0){
+            axios.post("http://localhost:8000/criarPedido",
+                {
+                    user:JSON.parse(localStorage.getItem('id')),
+                    itens:Cafedata
+                }
+            )
+            .then((res)=>{
+                console.log(res)
+            })
+        }
+        else{
+            window.alert("Você não tem nenhum item no seu carrinho para fazer um pedido")
+        }
+
+    }
 
     useEffect(()=>{
         console.log(current_session)
@@ -22,7 +40,6 @@ function Carrinho(){
                 console.log("Resposta requisição:", response.data.data_info)
                 setCafedata(response.data.data_info.resultado)
                 setPreço(response.data.data_info.preco_total)
-                console.log(preco)
                 setHtml(true)
             })
             .catch((response)=>{
@@ -80,7 +97,7 @@ function Carrinho(){
                 <div className={styles.total_carrinho}>
                     <h3 className={styles.price}>Total: R${preco}</h3>
                     <button onClick={()=>{
-
+                        criarPedido()
                     }}>Realizar Pedido</button>
                 </div>
                 </article>
