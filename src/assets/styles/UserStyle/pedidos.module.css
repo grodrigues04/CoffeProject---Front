@@ -1,0 +1,64 @@
+/* Pedidos.css */
+
+.pedidos_container {
+  color: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.titulo {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.pedidos_lista {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.pedido_card {
+  background-color: #2d1e20;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s;
+  font-size: 20px;
+  text-align: center; /* Centraliza os conteúdos dentro do card */
+}
+
+.pedido_card:hover {
+  transform: translateY(-5px);
+}
+
+.pedido_card img {
+  display: block;
+  margin: 0 auto; /* Centraliza a imagem no card */
+  border-radius: 12px; /* Borda arredondada */
+  max-width: 100%; /* Garante que a imagem não ultrapasse os limites do card */
+  height: auto; /* Mantém a proporção da imagem */
+}
+
+.pedido_card h2 {
+  margin-top: 10px;
+  font-size: 1.5rem;
+}
+
+.pedido_card p {
+  margin: 5px 0;
+}
+
+.pedidos_total {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.sem_pedido{
+  padding-top: 10%;
+  text-align: center;
+  font-size: 40px;
+}
