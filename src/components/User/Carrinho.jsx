@@ -3,6 +3,8 @@ import { useEffect, useState,  } from "react"
 import styles from "../../assets/styles/cafes.module.css";
 import Loading from "../utils/Loading";
 import Error from "../utils/Error"
+import { Navigate } from "react-router-dom";
+
 
 function Carrinho(){
 
@@ -11,6 +13,7 @@ function Carrinho(){
     const [htmlError, setHtmlError] = useState(false)
     const [Cafedata, setCafedata] = useState(null)
     const [preco, setPreço] = useState(null)
+    const [redirect, setRedirect] = useState(false)
 
 
     function criarPedido(){
@@ -25,6 +28,8 @@ function Carrinho(){
             )
             .then((res)=>{
                 console.log(res)
+                //Redireciona para a pagina de pedidos para exibir os pedidos
+                setRedirect(true)
             })
         }
         else{
@@ -49,6 +54,12 @@ function Carrinho(){
             })
         
     }, [])
+
+    if(redirect){
+        return <Navigate to="../pedidos" replace/>
+    }
+
+
     if(htmlError){
         return(
             <Error/>
